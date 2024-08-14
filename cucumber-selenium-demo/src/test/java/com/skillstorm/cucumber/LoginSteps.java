@@ -36,6 +36,12 @@ public class LoginSteps {
         this.loginPage.setPassword(password);
     }
 
+    @When("I enter invalid {string} and {string}")
+    public void i_enter_invalid_credentials(String username, String password) {
+        this.loginPage.setUsername("caroline");
+        this.loginPage.setPassword("password");
+    }
+
     @And("I click the login button")
     public void i_click_the_login_button() {
         this.loginPage.clickLogin();
@@ -50,6 +56,12 @@ public class LoginSteps {
     public void i_should_see_a_sign_off_link() {
         assertTrue(this.mainPage.signOffLinkDisplayed());
     }
+
+    @Then("I should see an error message {string}")
+    public void i_should_see_an_error_message(String message) {
+        assertTrue(loginPage.errorMessageDisplayed(message));
+    }
+
 
 }
 

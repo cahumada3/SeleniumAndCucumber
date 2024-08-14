@@ -23,6 +23,9 @@ public class LoginPage {
     @FindBy(name = "btnSubmit")
     private WebElement loginButton;
 
+    @FindBy(id = "_ctl0__ctl0_Content_Main_message")
+    private WebElement errorMessage;
+
     /**
      * Initializes the driver and sets an implicit wait
      */
@@ -80,6 +83,15 @@ public class LoginPage {
             e.printStackTrace();
         }
         loginButton.submit();
+    }
+
+    public boolean errorMessageDisplayed(String message) {
+        try {
+            Thread.sleep(1000);
+        } catch(InterruptedException e) {
+            e.printStackTrace();
+        }
+        return errorMessage.getText().contains(message);
     }
     
 }

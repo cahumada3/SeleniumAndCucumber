@@ -12,3 +12,9 @@ Feature: User Login
     |username | password |
     |jsmith   | Demo1234 |
     |admin    | admin    |
+
+  Scenario: Unsuccessful login with invalid credentials
+    Given I am on the login page
+    When I enter invalid "username" and "password"
+    And I click the login button
+    Then I should see an error message "Login Failed"
