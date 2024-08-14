@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class MainPage {
     private WebDriver driver;
-    private static final String baseUrl = "http://testfire.net/main.jsp";
+    private static final String baseUrl = "http://testfire.net/bank/main.jsp";
 
     @FindBy(id = "LoginLink")
     private WebElement signOffLink;

@@ -42,7 +42,8 @@ public class LoginPage {
         } catch(InterruptedException e) {
             e.printStackTrace();
         }
-        this.driver.get(baseUrl);
+        //driver.get(baseUrl);
+        driver.navigate().to(baseUrl);
     }
 
     /**

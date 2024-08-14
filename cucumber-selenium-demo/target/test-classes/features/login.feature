@@ -10,5 +10,5 @@ Feature: User Login
 
   Examples:
     |username | password |
-    |admin    | admin    |
     |jsmith   | Demo1234 |
+    |admin    | admin    |

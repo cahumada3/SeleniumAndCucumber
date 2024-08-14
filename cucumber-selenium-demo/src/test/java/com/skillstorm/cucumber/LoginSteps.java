@@ -20,14 +20,12 @@ public class LoginSteps {
 
     @Before("@login")
     public void before() {
-        ChromeOptions options = new ChromeOptions();
-        driver = new ChromeDriver(options);
         this.driver = new ChromeDriver();
         this.loginPage = new LoginPage(driver);
         this.mainPage = new MainPage(driver);
     }
 
-    @Given("I am on the login page ")
+    @Given("I am on the login page")
     public void i_am_on_the_login_page() {
         this.loginPage.get();
     }
